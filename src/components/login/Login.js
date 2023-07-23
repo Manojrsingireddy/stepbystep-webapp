@@ -51,7 +51,7 @@ export default function AuthForm(props) {
           console.log("Register successful!");
           console.log(response.data);
           const username = response.data.username;
-          navigate(`/userhome/${username}`)
+          navigate(`/quizform/${username}`)
         })
         .catch((error) => {
           console.log("Register error: ", error.response);

@@ -8,6 +8,7 @@ import Header from './components/header/Header';
 import NotFound from './components/notFound/NotFound';
 import Login from './components/login/Login';
 import UserHome from './components/userhome/UserHome'
+import QuizForm from './components/quizForm/QuizForm';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
             <Route path="/" element={<Home/>} ></Route>
             <Route path="/login" element={<Login/>} ></Route>
             <Route path="*" element = {<NotFound/>}></Route>
-            <Route path="/UserHome/:username" element = {<UserHome/>}></Route>
+            <Route path="/userhome/:username" element = {<UserHome/>}></Route>
+            <Route path="/quizform/:username" element = {<QuizForm/>}></Route>
           </Route>
       </Routes>
 
