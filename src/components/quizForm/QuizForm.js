@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import axios from "../../api/axiosConfig"; // Import your axios instance
-import {useParams} from "react-router-dom";
+import axios from "../../api/axiosConfig";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "./QuizForm.css"; // Import the CSS file for styling
 
 // Sample questions and answers
 const sampleQuestions = [
@@ -98,6 +99,7 @@ const sampleQuestions = [
 const QuizForm = () => {
   const { username } = useParams();
   const [answers, setAnswers] = useState({});
+  const navigate = useNavigate();
 
   const handleAnswerChange = (questionId, answer) => {
     setAnswers((prevAnswers) => ({
@@ -106,33 +108,29 @@ const QuizForm = () => {
     }));
   };
 
-  const navigate = useNavigate();
-
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     const payload = {
-      username: username, 
+      username: username,
       questionList: sampleQuestions.map((question) => ({
         question: question.questionText,
         answer: answers[question.id] || "",
       })),
     };
-    console.log(payload);
+
     axios
       .post("/api/v1/quizzes", payload, {
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
       })
       .then((response) => {
         console.log("Quiz created successfully:", response.data);
-        navigate(`/userhome/${username}`)
-        // Add any additional logic after successful quiz creation if needed
+        navigate(`/userhome/${username}`);
       })
       .catch((error) => {
         console.error("Error creating quiz:", error);
-        // Handle the error here, you can log the specific error response:
         if (error.response) {
           console.error("Error response:", error.response.data);
         }
@@ -140,21 +138,29 @@ const QuizForm = () => {
   };
 
   return (
-    <div>
-      <h2>Quiz Form</h2>
-      <form onSubmit={handleSubmit}>
-        {sampleQuestions.map((question) => (
-          <div key={question.id}>
-            <p>{question.questionText}</p>
-            <input
-              type="text"
-              value={answers[question.id] || ""}
-              onChange={(e) => handleAnswerChange(question.id, e.target.value)}
-            />
-          </div>
-        ))}
-        <button type="submit">Submit</button>
-      </form>
+    <div className="quiz-container">
+      <h2 className="quiz-header">Quiz Form</h2>
+      <div className="quiz-form-container">
+        <form className="quiz-form" onSubmit={handleSubmit}>
+          {sampleQuestions.map((question) => (
+            <div key={question.id} className="question-container">
+              <p>{question.questionText}</p>
+              <input
+                type="text"
+                value={answers[question.id] || ""}
+                onChange={(e) => handleAnswerChange(question.id, e.target.value)}
+              />
+            </div>
+          ))}
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div className="quiz-questions-container">
+        <h2>Quiz Questions</h2>
+        {/* Render the quiz questions here */}
+      </div>
     </div>
   );
 };
