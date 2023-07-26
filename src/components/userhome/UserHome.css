@@ -1,0 +1,22 @@
+/* Add your other CSS styles here as needed */
+
+/* Styling for completed goals */
+.completed {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: 1px solid #4CAF50;
+    padding: 8px;
+    margin-bottom: 5px;
+  }
+  
+  /* Styling for rejected goals */
+  .rejected {
+    background-color: #FF5722; /* Red */
+    color: white;
+    border: 1px solid #FF5722;
+    padding: 8px;
+    margin-bottom: 5px;
+  }
+  
+  /* Add more styles as needed */
+  
