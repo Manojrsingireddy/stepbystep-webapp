@@ -7,5 +7,5 @@ import axios from 'axios';
 // });
 
 export default axios.create({
-    baseURL: 'http://localhost:8080/'
+    baseURL: 'https://mcie1hl747.execute-api.us-east-1.amazonaws.com/Prod/'
 });
