@@ -1,33 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoePrints } from "@fortawesome/free-solid-svg-icons";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container"
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import {NavLink} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
- 
-return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-        <Container fluid>
-            <Navbar.Brand href="/" style={{"color":'teal'}}>
-                <FontAwesomeIcon icon={faShoePrints} /> Step By Step
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{maxHeight: '100px'}}
-                        navbarScroll
-                    >
-                    {/* <NavLink className ="nav-link" to="/">Home</NavLink>      */}
-                </Nav>
-                <a href="/login"> <Button variant="outline-info" className="me-2">Login/Register</Button> </a>
-            </Navbar.Collapse>
-        </Container>
-    </Navbar>
-  )
-}
+  return (
+    <nav className="bg-blue-900 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <Link to="/" className="text-xl font-semibold no-underline">
+          <FontAwesomeIcon icon={faShoePrints} /> Step By Step
+        </Link>
+        <div className="space-x-4">
+          {/* Add any navigation links here */}
+          {/* <Link to="/" className="text-teal-300 hover:text-teal-100">Home</Link> */}
+          <Link to="/login" className="text-teal-300 hover:text-teal-100">
+            Login/Register
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-export default Header
+export default Header;

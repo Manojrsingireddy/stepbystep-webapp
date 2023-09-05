@@ -9,6 +9,7 @@ import NotFound from './components/notFound/NotFound';
 import Login from './components/login/Login';
 import UserHome from './components/userhome/UserHome'
 import QuizForm from './components/quizForm/QuizForm';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/quizform/:username" element = {<QuizForm/>}></Route>
           </Route>
       </Routes>
+      <Footer/>
 
     </div>
   );

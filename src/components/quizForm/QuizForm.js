@@ -138,28 +138,30 @@ const QuizForm = () => {
   };
 
   return (
-    <div className="quiz-container">
-      <h2 className="quiz-header">Quiz Form</h2>
-      <div className="quiz-form-container">
-        <form className="quiz-form" onSubmit={handleSubmit}>
+    <div className="bg-gray-100 min-h-screen py-8">
+      <div className="max-w-xl mx-auto px-4">
+        <h2 className="text-2xl font-semibold text-center mb-8">Quiz Form</h2>
+        <form className="bg-white p-4 shadow-md rounded-lg" onSubmit={handleSubmit}>
           {sampleQuestions.map((question) => (
-            <div key={question.id} className="question-container">
-              <p>{question.questionText}</p>
+            <div key={question.id} className="mb-4">
+              <label className="block text-gray-700">{question.questionText}</label>
               <input
                 type="text"
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
                 value={answers[question.id] || ""}
                 onChange={(e) => handleAnswerChange(question.id, e.target.value)}
               />
             </div>
           ))}
-          <button type="submit" className="submit-button">
-            Submit
-          </button>
+          <div className="text-center">
+            <button
+              type="submit"
+              className="py-2 px-4 bg-primary text-white rounded-md hover:bg-opacity-80 focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50"
+            >
+              Submit
+            </button>
+          </div>
         </form>
-      </div>
-      <div className="quiz-questions-container">
-        <h2>Quiz Questions</h2>
-        {/* Render the quiz questions here */}
       </div>
     </div>
   );
