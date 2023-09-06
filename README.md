@@ -1,4 +1,4 @@
-# Health and Well-Being Application - Frontend
+# StepByStep Application - Frontend
 
 Welcome to the frontend repository of our Health and Well-Being Application. This repository contains the code for the application's user interface, built with React.js, Tailwind CSS, and deployed on Vercel. Below, you'll find information on the application's purpose, technology stack, project structure, and key learnings.
 
