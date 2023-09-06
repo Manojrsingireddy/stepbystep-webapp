@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Health and Well-Being Application - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the frontend repository of our Health and Well-Being Application. This repository contains the code for the application's user interface, built with React.js, Tailwind CSS, and deployed on Vercel. Below, you'll find information on the application's purpose, technology stack, project structure, and key learnings.
 
-## Available Scripts
+## Application Overview
 
-In the project directory, you can run:
+This application is designed to assist users in improving their overall health and well-being. It offers a personalized approach to health goal setting and tracking. Users can sign up, complete a health goals/information quiz, view and manage their daily health goals, mark goals as completed or rejected, and generate new daily health goals as needed. It serves as a valuable tool for individuals seeking to cultivate healthier habits and monitor their progress effectively.
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React.js**: A versatile JavaScript framework for building interactive web applications.
+- **Tailwind CSS**: A utility-first CSS framework for enhancing the application's aesthetics.
+- **Vercel**: A platform for deploying web applications with a robust CI/CD pipeline.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+The frontend project is organized into components and routes to enrich the user experience. Here are the main components:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Landing Page**: The initial page that provides an overview of the application.
+2. **Login/Register Page**: Where users can sign in or create a new account.
+3. **Quiz Form**: Allows users to submit health goals and information.
+4. **User Dashboard**: The personalized home page displaying daily health goals, historical goals, and the ability to manage and generate new goals.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the frontend locally for development or testing purposes, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository to your local machine.
+2. Ensure you have Node.js and npm installed.
+3. Navigate to the project directory and run `npm install` to install dependencies.
+4. Configure environment variables if needed.
+5. Run the application locally using `npm start`.
+6. Access the application in your web browser at `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The frontend of our Daily Health Goal Web APp is deployed on Vercel, providing a seamless and automated CI/CD pipeline from our GitHub repository. The web app can be accessed at https://stepbystep-webapp.vercel.app/.
