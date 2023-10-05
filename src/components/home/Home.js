@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
+    <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center min-h-screen">
       <div className="lg:max-w-lg lg:w-full md:w-1/3 w-full">
         {/* Logo image */}
         <img
